@@ -2,7 +2,7 @@
 This library is used to create simple, thread-safe Atomic Value wrappers that make it easy to set and get values, as well as create thread-safe counters that can easily be incremented.  
 
 # Setup
-First, run this command in your project directory: `zig fetch --save  https://github.com/austinrtn/AtomicWrapper/archive/refs/tags/v1.0.tar.gz`
+First, run this command in your project directory: `zig fetch --save  https://github.com/austinrtn/AtomicWrapper/archive/refs/tags/V1.0.tar.gz`
 
 Then, add this to your `build.zig` file:
 
@@ -14,10 +14,9 @@ const atomic_wrapper_dep = b.dependency("AtomicWrapper", .{
 exe.root_module.addImport("AtomicWrapper", atomic_wrapper_dep.module("AtomicWrapper"));
 ```
 
-Finally, add the library to your Zig file of choice:
+Finally, add this to the top of your Zig file of choice to use the library:
 ```zig
-const AW = @import("AtomicWrapper");
-const AtomicWrapper = AW.AtomicWrapper;
+const AtomicWrapper = @import("AtomicWrapper").AtomicWrapper;
 ```
 
 # Usage
